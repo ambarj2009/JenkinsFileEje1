@@ -1,6 +1,8 @@
 pipeline {
-   agent none
-	//agent any
+    agent any
+    parameters {
+	        string(name: 'URL_GIT', defaultValue: '', description: 'URL de repositorio Git')
+    }
     stages {
 	
 		stage('Non-Parallel Stage') {
